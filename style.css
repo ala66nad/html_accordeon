@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-img{
+img.fond{
     position: absolute;
     top: 0;
     z-index: -1;

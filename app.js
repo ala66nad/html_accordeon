@@ -1,6 +1,13 @@
-let element = [];
-for (let index = 0; index < 50; index++) {
-    element.push(Math.floor(Math.random() * 6 + 1));
-    
-}
-console.log(element);
+const details = document.querySelectorAll("details");
+details.forEach(element => {            
+    element.addEventListener("click", (e) => {    
+        e.preventDefault();        
+        details.forEach(a => {
+            if(a.id == element.id && element.open){
+                element.open = !element.open;
+                return;
+            }            
+            a.open = a.id != element.id ? false : true;            
+        });
+    });
+});
